@@ -1,22 +1,98 @@
-<!-- Header + Hero Section -->
-<section style="background: linear-gradient(135deg, #3D2C41, #1a1424); color: white; text-align: center; padding: 100px 20px; font-family: 'Poppins', sans-serif;">
-  
-  <!-- Glow effect -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at center, rgba(15,185,177,0.2), transparent 70%); pointer-events:none;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairah Studio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
 
-  <!-- Title -->
-  <h1 style="font-size: 80px; font-weight: 900; color:#D4AF37; letter-spacing: 5px; text-shadow: 0 0 20px #D4AF37, 0 0 40px #0FB9B1; margin:0; position: relative; z-index:1;">
-    KAIRAH STUDIO
-  </h1>
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #3D2C41, #1a1424);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
 
-  <!-- Subtitle -->
-  <p style="font-size: 24px; margin-top: 20px; color:#0FB9B1; font-weight:600; position: relative; z-index:1;">
-    Divine Cinematics by AI — Create videos beyond imagination
-  </p>
+  .hero::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(15,185,177,0.2) 0%, transparent 70%);
+    animation: glow 6s infinite alternate;
+    z-index: 0;
+  }
 
-  <!-- Button -->
-  <a href="pricing.html" style="display:inline-block; margin-top:40px; padding:20px 50px; font-weight:700; font-size:20px; color:#000; background:#D4AF37; border-radius:50px; text-decoration:none; box-shadow: 0 0 20px #D4AF37, 0 0 40px #0FB9B1; position:relative; z-index:1; transition: all 0.3s;">
-    Explore Plans
-  </a>
+  @keyframes glow {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.2) rotate(45deg); }
+  }
 
+  .hero h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #D4AF37;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px #D4AF37, 0 0 40px #0FB9B1;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .hero p {
+    font-size: 1.8rem;
+    color: #0FB9B1;
+    font-weight: 600;
+    margin-top: 20px;
+    z-index: 1;
+  }
+
+  .hero a {
+    margin-top: 50px;
+    padding: 20px 60px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    background: #D4AF37;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 20px #D4AF37, 0 0 40px #0FB9B1;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+
+  .hero a:hover {
+    background: #0FB9B1;
+    color: white;
+    box-shadow: 0 0 30px #0FB9B1, 0 0 50px #D4AF37;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 3.5rem; }
+    .hero p { font-size: 1.2rem; }
+    .hero a { font-size: 1.2rem; padding: 15px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>KAIRAH STUDIO</h1>
+  <p>Divine Cinematics by AI — Create videos beyond imagination</p>
+  <a href="pricing.html">Explore Plans</a>
 </section>
+
+</body>
+</html>
