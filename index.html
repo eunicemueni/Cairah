@@ -1,98 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kairah Studio</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #1a1424;
-  }
-
-  /* Header */
-  header {
-    width: 100%;
-    background-color: #3D2C41; /* Midnight Plum */
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    color: #D4AF37; /* Kairah Gold */
-    letter-spacing: 5px;
-    margin: 0;
-    text-shadow: 0 0 20px #D4AF37, 0 0 40px rgba(212,175,55,0.3);
-  }
-
-  /* Hero Section */
-  .hero {
-    position: relative;
-    height: calc(100vh - 120px); /* full screen minus header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(212,175,55,0.2), transparent 70%);
-    z-index: 0;
-  }
-
-  .hero p {
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 600;
-    margin-top: 20px;
-    z-index: 1;
-  }
-
-  .hero a {
-    margin-top: 50px;
-    padding: 20px 60px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: black;
-    background: #D4AF37;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 0 20px #D4AF37, 0 0 40px rgba(212,175,55,0.3);
-    z-index: 1;
-    transition: all 0.3s ease;
-  }
-
-  .hero a:hover {
-    background: #B9962F;
-    color: white;
-    box-shadow: 0 0 30px #D4AF37, 0 0 50px rgba(212,175,55,0.3);
-  }
-
-  @media (max-width: 768px) {
-    header h1 { font-size: 3.5rem; }
-    .hero p { font-size: 1.2rem; }
-    .hero a { font-size: 1.2rem; padding: 15px 40px; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kairah Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#1a1424] font-poppins text-white">
 
-<header>
-  <h1>KAIRAH STUDIO</h1>
-</header>
+  <!-- Header -->
+  <header class="w-full bg-[#3D2C41] py-16 text-center">
+    <h1 class="text-6xl font-extrabold text-[#D4AF37] tracking-widest">KAIRAH STUDIO</h1>
+  </header>
 
-<section class="hero">
-  <p>Divine Cinematics by AI — Create videos beyond imagination</p>
-  <a href="pricing.html">Explore Plans</a>
-</section>
+  <!-- Hero Section -->
+  <section class="flex flex-col justify-center items-center text-center h-[calc(100vh-128px)] px-4">
+    <p class="text-2xl md:text-3xl font-semibold mt-6">Divine Cinematics by AI — Create videos beyond imagination</p>
+    <p class="text-xl md:text-2xl font-medium mt-4 max-w-3xl">Bring your ideas to life with cinematic quality and AI-powered precision.</p>
+    <p class="text-lg md:text-xl mt-4 max-w-3xl">From short teasers to full-length masterpieces, Kairah Studio transforms your vision into reality.</p>
+    <a href="pricing.html" 
+       class="mt-10 px-12 py-4 bg-[#D4AF37] text-black font-bold text-xl rounded-full shadow-lg hover:bg-[#B9962F] transition-all duration-300">
+       Explore Plans
+    </a>
+  </section>
 
 </body>
 </html>
